@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: "Roboto", "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  color: white;
+  background-color: #1A1A19;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+a {
+  color: #B2CEDE;
+}
+
+#header-bg {
+  position: relative;
+  background: inherit;
+  overflow: hidden;
+}
+
+#header-bg:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 135%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-position: 70% 15%;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  opacity: 0.8;
+}
+
+.view-bg {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  opacity: 0.3;
+}
+
+.nav-row {
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 0 3rem 0;
+}
+
+.nav-row > i {
+  cursor: pointer;
+  margin: 0 1rem;
+}
+
+.about-me {
+  padding-top: 5em;
+}
+
+.weak-text-1 {
+  font-size:0.8em; 
+  opacity:0.8;
+}

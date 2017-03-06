@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Anna</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:100,300,400" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/landing.css">
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+
+    <div id="app">
+      <div id="header-bg">
+        <el-row type="flex" justify="center" align="top" style="padding:4rem 0 1rem 0;">
+          <el-col :lg="4" :md="4" :sm="8" :xs="10">
+            <img id="my-photo" src="images/me.jpg" class="image">
+          </el-col>
+        </el-row>
+        <div style="text-align:center; font-size:2rem; padding:1rem 0 1rem 0;">你好，我是冯园园</div>
+        <div class="nav-row">
+          <i class="fa fa-home" aria-hidden="true" v-on:click="changePage('default')"></i>
+          <i class="fa fa-address-card" aria-hidden="true" v-on:click="changePage('about_me')"></i>
+          <i class="fa fa-television" aria-hidden="true" v-on:click="changePage('my_class')"></i>
+        </div>
+      </div>
+
+      <template v-if="page === 'default'">
+        <div style="padding: 3rem;
+        text-align: center;
+        font-size: 2rem;">
+          <div>一位少儿艺术教师</div>
+          <div>I am seeking. I am striving. I am in it with all my heart.</div>
+        </div>
+
+      </template>
+
+      <template v-if="page === 'about_me'">
+        <el-row type="flex" justify="center" class="row-bg about-me">
+          <el-col :span="22">
+            <p style="text-align:center; font-size:2em;">个人简历</p>
+            <p>
+              <i class="fa fa-thumbs-up" aria-hidden="true"></i> 工作能力：
+              <ul>
+                <li>艺术课程设计</li>
+                <li>英语、汉语双语教学，海外英文培训</li>
+                <li>普通话水平测试二级甲等</li>
+                <li>通过IB高级课程培训</li>
+                <li>小学班级管理与事务处理</li>
+                <li>熟悉小学生学习特点和引导方式</li>
+                <li>灵活使用多种教学方式与内容</li>
+                <li>Photoshop, Illustrator, Flash, Premiere 以及Microsoft Office</li>
+              </ul>
+            </p>
+            <p>
+              <i class="fa fa-microphone" aria-hidden="true"></i> 课程特点:
+              <ul>
+                <li>理解孩子的学习方式，采用符合孩子发育特点的教学方法、授课方式和课程设计</li>
+                <li>注重各种艺术形式(绘画、素描、印花、浮雕等)和媒介(颜料、蜡笔、纸张、画布和粘土等)的探索</li>
+                <li>涵盖不同时期和地区的多样化艺术风格</li>
+                <li>基于基本艺术元素和设计原则，如点、线、面、形状、色彩、明暗对比等</li>
+                <li>因材施教，鼓励学生于创作中表达自我，寓情于画</li>
+              </ul>
+            </p>
+            <p>
+              <i class="fa fa-briefcase" aria-hidden="true"></i> 工作经验:
+              <br>
+              青苗国际双语学校(IB学校)，艺术教师，北京(双语教学)
+              <br>
+              <span class="weak-text-1">
+                2015年8月-2017年3月
+                <br>
+                青苗国际双语学校是获得授权了的IB世界学校，提供IB、DP课程，同时也是IB小学项目（PYP）和初中项目(MPY)的候选学校。
+              </span>
+              <ul>
+                <li>负责小学低年级（幼儿园至二年级）共计10个班级220名学生的艺术课程设计和教学。细致观察每位学生的特点，在学期结尾为每位学生撰写学期总结（500字左右），以供学生家长参考，并负责家长的问询。</li>
+                <li>根据学校“超学科探索主题”，结合幼儿园至二年级学生特征，参考经典艺术实例，进行艺术课课程设计，确定每节课的主题、目标、创作形式、材料、分步时间和课堂流程。</li>
+                <li>在课程设计中，熟练融合蜡笔、彩色画笔、彩纸、剪贴、黏土、颜料等创作材料，以及手绘、剪贴、油画、手工、海报、印花等创作方式。</li>
+                <li>辅助三到六年级艺术课程设计和教学，共计5个班级110名学生，为主讲教师提供课程设计建议。</li>
+                <li>负责协调课程材料准备，学生分组，以及平时课堂秩序维持。</li>
+                <li>主持开设课外艺术俱乐部，担任辅导老师，在每周举行的俱乐部活动中引导学生自由探索艺术之美。</li>
+              </ul>
+              童年创想少儿美术培训基地，实习艺术辅导教师，山东
+              <br>
+              <span class="weak-text-1">
+                2013年8月-2014年1月
+              </span>
+              <ul>
+                <li>辅导50多位小朋友的手绘、手工、剪纸、陶艺等艺术课程。</li>
+              </ul>
+            </p>
+            <p>
+              <i class="fa fa-graduation-cap" aria-hidden="true"></i> 教育背景:
+              <ul>
+                <li>IB课程初、高级培训（IBAP Workshops）<span class="weak-text-1">2015年8月-2017年3月</span></li>     
+                <li>熟练英文文凭（高级）, PSB Academy（新加坡）<span class="weak-text-1">2014年4月-2015年3月</span></li>
+                <li>
+                  设计艺术系艺术学硕士, 沈阳航空航天大学 <span class="weak-text-1">2011年9月-2014年3月</span>
+                  <br>
+                  <span class="weak-text-1">艺术类研究生二等奖学金，研究生院先进助研工作者，全国大学生广告艺术大赛“南京青奥会”专题设计竞赛辽宁分赛区一等奖，论文“浅析消费心理特征表现下儿童食品包装图形设计”发表于《设计》杂志</span></li>
+                <li>
+                  动画系艺术学学士, 沈阳航空航天大学 <span class="weak-text-1">2007年9月-2011年6月</span>
+                  <br>
+                  <span class="weak-text-1">沈阳市优秀大学生，综合一等奖学金四次，综合二等奖学金两次，综合三等奖学金一次</span>
+                </li>
+              </ul>
+            </p>
+            <p style="text-align:center;">
+            &hearts; &hearts; &hearts;
+            </p>
+          </el-col>
+        </el-row>
+      </template>
+
+      <template v-if="page === 'my_class'">
+        <div style="padding: 3rem;
+        text-align: center;
+        font-size: 2rem;">
+          <div>Coming Soom</div>
+        </div>
+
+      </template>
+      
+    </div>
+
+  </body>
+
+   <!-- import Vue before Element -->
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <!-- import JavaScript -->
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+  <script>
+    new Vue({
+      el: '#app',
+      data: function(){
+        return { 
+          visible: false,
+          page: "default"
+        }
+      },
+      methods: {
+        changePage: function(page) {
+          this.page = page;
+        }
+      }
+    })
+  </script>
+</html>
+
